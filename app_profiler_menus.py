@@ -132,8 +132,10 @@ elif menu == "Contact":
     # Add a contact section
     st.header("Contact Information")
     email = "kebogilesesana@gmail.com"
+    number = "081 759 3381"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
