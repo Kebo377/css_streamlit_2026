@@ -52,15 +52,15 @@ if menu == "Researcher Profile":
     caption="Nature (Pixabay)"
 )
 
-elif menu == "Educational Qualifications":
-    st.title("Educational Qualifications")
+elif menu == "Educational_Qualifications":
+    st.title("Educational_Qualifications")
     st.sidebar.header("Upload and Filter")
 
-    # Upload Educational Qualifications file
-    uploaded_file = st.file_uploader("Upload a pdf  of your educational qualifications", type="Educational Qualifications")
+    # Upload Educational_Qualifications file
+    uploaded_file = st.file_uploader("Upload a pdf  of your educational_qualifications", type="Educational Qualifications")
     if uploaded_file:
-        educational qualifications = pd.read_csv(uploaded_file)
-        st.dataframe(publications)
+        educational_qualifications = pd.read_csv(uploaded_file)
+        st.dataframe(Educational_Qualifications)
 
         # Add filtering for year or keyword
         keyword = st.text_input("Filter by keyword", "")
@@ -71,12 +71,12 @@ elif menu == "Educational Qualifications":
             st.write(f"Filtered Results for '{keyword}':")
             st.dataframe(filtered)
         else:
-            st.write("Showing all publications")
+            st.write("Showing all Educational_Qualifications")
 
-        # Educational Qualifications trends
-        if "Year" in Educational Qualifications.columns:
-            st.subheader("Educational Qualifications")
-            year_counts = Educational Qualifications["Year"].value_counts().sort_index()
+        # Educational_Qualifications trends
+        if "Year" in Educational_Qualifications.columns:
+            st.subheader("Educational _Qualifications")
+            year_counts = Educational_Qualifications["Year"].value_counts().sort_index()
             st.bar_chart(year_counts)
         else:
             st.write("The CSV does not have a 'Year' column to visualize trends.")
@@ -132,9 +132,9 @@ elif menu == "Contact":
     # Add a contact section
     st.header("Contact Information")
     email = "kebogilesesana@gmail.com"
-    number = "081 759 3381"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
