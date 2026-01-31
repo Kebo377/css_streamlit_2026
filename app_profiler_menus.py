@@ -52,14 +52,14 @@ if menu == "Researcher Profile":
     caption="Nature (Pixabay)"
 )
 
-elif menu == "Publications":
-    st.title("Publications")
+elif menu == "Educational Qualifications":
+    st.title("Educational Qualifications")
     st.sidebar.header("Upload and Filter")
 
-    # Upload publications file
-    uploaded_file = st.file_uploader("Upload a CSV of Publications", type="csv")
+    # Upload Educational Qualifications file
+    uploaded_file = st.file_uploader("Upload a pdf  of your educational qualifications", type="Educational Qualifications")
     if uploaded_file:
-        publications = pd.read_csv(uploaded_file)
+        educational qualifications = pd.read_csv(uploaded_file)
         st.dataframe(publications)
 
         # Add filtering for year or keyword
@@ -73,10 +73,10 @@ elif menu == "Publications":
         else:
             st.write("Showing all publications")
 
-        # Publication trends
-        if "Year" in publications.columns:
-            st.subheader("Publication Trends")
-            year_counts = publications["Year"].value_counts().sort_index()
+        # Educational Qualifications trends
+        if "Year" in Educational Qualifications.columns:
+            st.subheader("Educational Qualifications")
+            year_counts = Educational Qualifications["Year"].value_counts().sort_index()
             st.bar_chart(year_counts)
         else:
             st.write("The CSV does not have a 'Year' column to visualize trends.")
@@ -135,6 +135,7 @@ elif menu == "Contact":
     number = "081 759 3381"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
