@@ -69,16 +69,9 @@ qualifications = [
 
 st.title("Educational Qualification")
 
-for q in qualification:
-    st.subheader(q["title"])
-    st.write(f"**Institution:** {q['institution']}")
-    st.write(f"**Year:** {q['year']}")
-    st.write(f"**Details:** {q['details']}")
-    st.divider()
-
-#elif menu == "Educational_Qualifications":
-  #  st.title("Educational_Qualifications")
-   # st.sidebar.header("Upload and Filter")
+elif menu == "Educational_Qualifications":
+    st.title("Educational_Qualifications")
+    st.sidebar.header("Upload and Filter")
 
     # Upload Educational_Qualifications file
  #   uploaded_file = st.file_uploader("Upload a pdf  of your educational_qualifications", type="Educational Qualifications")
@@ -105,9 +98,9 @@ for q in qualification:
         else:
             st.write("The CSV does not have a 'Year' column to visualize trends.")
 
-#elif menu == "STEM Data Explorer":
- #   st.title("STEM Data Explorer")
- #   st.sidebar.header("Data Selection")
+elif menu == "STEM Data Explorer":
+    st.title("STEM Data Explorer")
+    st.sidebar.header("Data Selection")
 
 
     # Tabbed view for STEM data
@@ -153,12 +146,13 @@ for q in qualification:
         
         
 
-#elif menu == "Contact":
+elif menu == "Contact":
     #Add a contact section
     st.header("Contact Information")
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
