@@ -151,12 +151,13 @@ for q in qualification:
         
         
 
-elif menu == "Contact":
+#elif menu == "Contact":
     # Add a contact section
-    st.header("Contact Information")
-    email = "kebogilesesana@gmail.com"
+    #st.header("Contact Information")
+    #email = "kebogilesesana@gmail.com"
 
-    st.write(f"You can reach me at {email}.")
+    #st.write(f"You can reach me at {email}.")
+
 
 
 
