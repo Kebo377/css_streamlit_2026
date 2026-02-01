@@ -61,9 +61,9 @@ st.title("Educational Qualification")
 
     # Upload Educational_Qualifications file
    # uploaded_file = st.file_uploader("Upload a pdf  of your educational_qualifications", type="Educational Qualifications")
-    if uploaded_file:
-        educational_qualifications = pd.read_csv(uploaded_file)
-        st.dataframe(Educational_Qualifications)
+   # if uploaded_file:
+    #    educational_qualifications = pd.read_csv(uploaded_file)
+     #   st.dataframe(Educational_Qualifications)
 
         # Add filtering for year or keyword
         keyword = st.text_input("Filter by keyword", "")
@@ -138,6 +138,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
