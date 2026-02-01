@@ -12,6 +12,29 @@ menu = st.sidebar.radio(
     ["Researcher Profile", "Educational Qualifications", "Contact"],
 )
 
+# Adding Educational Qualification
+qualifications = [
+    {
+        "title": "Bachelor of Sciences in Mathematics and Applied Mathematics",
+        "skill": "Matlab, Critical thinking, Problem solver"
+    },
+    {
+        "title": "National Senior Certificate",
+        "institution": "Motswela Secondary School",
+        "year": "2019",
+        "details": "Mathematics, Physical Sciences, Life Sciences, Geography"
+    }
+]
+
+st.title("Educational Qualification")
+
+for q in qualification:
+    st.subheader(q["title"])
+    st.write(f"**Institution:** {q['institution']}")
+    st.write(f"**Year:** {q['year']}")
+    st.write(f"**Details:** {q['details']}")
+    st.divider()
+
 # Dummy STEM data
 physics_data = pd.DataFrame({
     "Experiment": ["Alpha Decay", "Beta Decay", "Gamma Ray Analysis", "Quark Study", "Higgs Boson"],
@@ -136,6 +159,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
