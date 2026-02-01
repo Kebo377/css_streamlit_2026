@@ -34,7 +34,7 @@ weather_data = pd.DataFrame({
 
 # Sections based on menu selection
 if menu == "Researcher Profile":
-    st.title("Researcher Profile")
+    st.title("My Profile")
     st.sidebar.header("Profile Options")
 
     # Collect basic information
@@ -48,8 +48,9 @@ if menu == "Researcher Profile":
     st.write(f"**Institution:** {institution}")
     
     st.image(
-    "images/IMG-20240115-WA0004.jpg",
-    caption="Nature (Pixabay)"
+    "https://cdn.vectorstock.com/i/1000v/80/30/mathematics-symbols-and-formulas-background-vector-46698030.jpg",
+    caption="My Profile Picture",
+    width=250
     )
 
 elif menu == "Educational_Qualifications":
@@ -134,6 +135,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
