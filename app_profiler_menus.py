@@ -49,8 +49,8 @@ if menu == "Researcher Profile":
     
     st.image(
     "https://cdn.vectorstock.com/i/1000v/80/30/mathematics-symbols-and-formulas-background-vector-46698030.jpg",
-    caption="My Profile Picture",
-    width=250
+    #caption="My Profile Picture",
+    width=2500
     )
 
 elif menu == "Educational_Qualifications":
@@ -135,6 +135,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
