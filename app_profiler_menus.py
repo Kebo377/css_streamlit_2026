@@ -9,7 +9,7 @@ st.set_page_config(page_title="Researcher Profile and STEM Data Explorer", layou
 st.sidebar.title("Navigation")
 menu = st.sidebar.radio(
     "Go to:",
-    ["Researcher Profile", "Publications", "STEM Data Explorer", "Contact"],
+    ["Researcher Profile", "Educational Qualifications", "STEM Data Explorer", "Contact"],
 )
 
 # Dummy STEM data
@@ -47,7 +47,7 @@ if menu == "Researcher Profile":
     st.write(f"**Field of Research:** {field}")
     st.write(f"**Institution:** {institution}")
     
-    st.image(
+    #st.image(
     "images/IMG-20240115-WA0004.jpg",
     caption="Nature (Pixabay)"
 )
@@ -134,6 +134,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
