@@ -76,12 +76,12 @@ for q in qualification:
     st.write(f"**Details:** {q['details']}")
     st.divider()
 
-elif menu == "Educational_Qualifications":
-    st.title("Educational_Qualifications")
-    st.sidebar.header("Upload and Filter")
+#elif menu == "Educational_Qualifications":
+  #  st.title("Educational_Qualifications")
+   # st.sidebar.header("Upload and Filter")
 
     # Upload Educational_Qualifications file
-    uploaded_file = st.file_uploader("Upload a pdf  of your educational_qualifications", type="Educational Qualifications")
+ #   uploaded_file = st.file_uploader("Upload a pdf  of your educational_qualifications", type="Educational Qualifications")
     if uploaded_file:
         educational_qualifications = pd.read_csv(uploaded_file)
         st.dataframe(Educational_Qualifications)
@@ -159,6 +159,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
