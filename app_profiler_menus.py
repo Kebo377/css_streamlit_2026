@@ -49,8 +49,7 @@ if menu == "Researcher Profile":
     
     #st.image(
     "images/IMG-20240115-WA0004.jpg",
-    caption="Nature (Pixabay)"
-)
+    #caption="Nature (Pixabay)")
 
 elif menu == "Educational_Qualifications":
     st.title("Educational_Qualifications")
@@ -134,6 +133,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
