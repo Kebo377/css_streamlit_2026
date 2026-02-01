@@ -105,9 +105,9 @@ for q in qualification:
         else:
             st.write("The CSV does not have a 'Year' column to visualize trends.")
 
-elif menu == "STEM Data Explorer":
-    st.title("STEM Data Explorer")
-    st.sidebar.header("Data Selection")
+#elif menu == "STEM Data Explorer":
+ #   st.title("STEM Data Explorer")
+ #   st.sidebar.header("Data Selection")
 
 
     # Tabbed view for STEM data
@@ -159,6 +159,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
