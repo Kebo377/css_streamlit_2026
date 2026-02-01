@@ -55,7 +55,7 @@ if menu == "Researcher Profile":
 
 st.title("Educational Qualification")
 
-elif menu == "Educational_Qualifications":
+#elif menu == "Educational_Qualifications":
     st.title("Educational_Qualifications")
     st.sidebar.header("Upload and Filter")
 
@@ -138,6 +138,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
