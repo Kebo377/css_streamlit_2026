@@ -69,7 +69,7 @@ elif menu == "Educational_Qualifications":
         keyword = st.text_input("Filter by keyword", "")
         if keyword:
             filtered = publications[
-                publications.apply(lambda row: keyword.lower() in row.astype(str).str.lower().values, axis=1)
+               # publications.apply(lambda row: keyword.lower() in row.astype(str).str.lower().values, axis=1)
             ]
             st.write(f"Filtered Results for '{keyword}':")
             st.dataframe(filtered)
@@ -138,6 +138,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
