@@ -101,7 +101,7 @@ qualifications = [
 
 st.title("Educational Qualification")
 
-for q in qualification
+for q in qualification:
     st.subheader(q["title"])
     st.write(f"**Institution:** {q['institution']}")
     st.write(f"**Year:** {q['year']}")
@@ -157,6 +157,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
