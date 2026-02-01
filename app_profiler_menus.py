@@ -48,7 +48,7 @@ if menu == "Researcher Profile":
     st.write(f"**Institution:** {institution}")
     
     st.image(
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaVim0h9JK2kcrFa2-cbBgQYsNRNqavub2kQ&s",
+    "https://fiveable.me/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fstatic.prod.fiveable.me%2Fsearch-images%252F%2522Fundamental_definitions_examples_groups_rings_fields_algebraic_structures_image_diagram_visual_representation%2522-RealSet_w600.png&w=3840&q=75",
     #caption="My Profile Picture",
     width=1000
     )
@@ -136,6 +136,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
