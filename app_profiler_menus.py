@@ -48,7 +48,7 @@ if menu == "Researcher Profile":
     st.write(f"**Institution:** {institution}")
     
     st.image(
-    "https://cdn.vectorstock.com/i/1000v/80/30/mathematics-symbols-and-formulas-background-vector-46698030.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc_9yneN3fBQZUzaxGSjVB3rr-XFromLn1gg&s",
     #caption="My Profile Picture",
     width=2500
     )
@@ -157,6 +157,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
