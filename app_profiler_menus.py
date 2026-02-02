@@ -9,7 +9,7 @@ st.set_page_config(page_title="Researcher Profile and STEM Data Explorer", layou
 st.sidebar.title("Navigation")
 menu = st.sidebar.radio(
     "Go to:",
-    ["Researcher Profile", "Educational Qualification", "STEM Data Explorer", "Contact"],
+    ["Researcher Profile", "Educational Qualifications", "STEM Data Explorer", "Contact"],
 )
 
 # Dummy STEM data
@@ -38,9 +38,9 @@ if menu == "Researcher Profile":
     st.sidebar.header("Profile Options")
 
     # Collect basic information
-    name = "Dr. Jane Doe"
-    field = "Astrophysics"
-    institution = "University of Science"
+    name = "Kebogile Sesana"
+    field = "Mathematics"
+    institution = "University of the Free State"
 
     # Display basic profile information
     st.write(f"**Name:** {name}")
@@ -49,34 +49,34 @@ if menu == "Researcher Profile":
     
     st.image(
     "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
-    caption="Nature (Pixabay)"
+    #caption="Nature (Pixabay)"
 )
 
-elif menu == "Publications":
-    st.title("Publications")
+elif menu == "Educational Qualifications":
+    st.title("Educational Qualifications")
     st.sidebar.header("Upload and Filter")
 
-    # Upload publications file
-    uploaded_file = st.file_uploader("Upload a CSV of Publications", type="csv")
+    # Upload Educational Qualifications file
+    uploaded_file = st.file_uploader("Upload a CSV of Educational Qualifications", type="csv")
     if uploaded_file:
-        publications = pd.read_csv(uploaded_file)
-        st.dataframe(publications)
+        Educational Qualifications = pd.read_csv(uploaded_file)
+        st.dataframe(Educational Qualifications)
 
         # Add filtering for year or keyword
         keyword = st.text_input("Filter by keyword", "")
         if keyword:
-            filtered = publications[
-                publications.apply(lambda row: keyword.lower() in row.astype(str).str.lower().values, axis=1)
+            filtered = Educational Qualifications[
+                Educational Qualifications.apply(lambda row: keyword.lower() in row.astype(str).str.lower().values, axis=1)
             ]
             st.write(f"Filtered Results for '{keyword}':")
             st.dataframe(filtered)
         else:
-            st.write("Showing all publications")
+            st.write("Showing all Educational Qualifications")
 
-        # Publication trends
-        if "Year" in publications.columns:
-            st.subheader("Publication Trends")
-            year_counts = publications["Year"].value_counts().sort_index()
+        # EducationalQualifications trends
+        if "Year" in Educational Qualifications.columns:
+            st.subheader("Educational Qualifications Trends")
+            year_counts = Educational Qualifications["Year"].value_counts().sort_index()
             st.bar_chart(year_counts)
         else:
             st.write("The CSV does not have a 'Year' column to visualize trends.")
@@ -134,3 +134,4 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
