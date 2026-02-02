@@ -55,9 +55,31 @@ if menu == "Researcher Profile":
 
 st.title("Educational Qualification")
 
-#elif menu == "Educational_Qualifications":
-  #  st.title("Educational_Qualifications")
-  #  st.sidebar.header("Upload and Filter")
+qualifications = [
+    {
+        "title": "Bachelor of Sciences in Mathematics and Applied Mathematics",
+        "skill": "Matlab, Critical thinking, Problem solver"
+    },
+    {
+        "title": "National Senior Certificate",
+        "institution": "Motswela Secondary School",
+        "year": "2019",
+        "details": "Mathematics, Physical Sciences, Life Sciences, Geography"
+    }
+]
+
+st.title("Educational Qualification")
+
+for q in qualification:
+    st.subheader(q["title"])
+    st.write(f"**Institution:** {q['institution']}")
+    st.write(f"**Year:** {q['year']}")
+    st.write(f"**Details:** {q['details']}")
+    st.divider()
+
+elif menu == "Educational_Qualifications":
+    st.title("Educational_Qualifications")
+    st.sidebar.header("Upload and Filter")
 
     # Upload Educational_Qualifications file
     uploaded_file = st.file_uploader("Upload a pdf  of your educational_qualifications", type="Educational Qualifications")
@@ -138,6 +160,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
