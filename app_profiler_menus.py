@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # Set page title
-st.set_page_config(page_title="Researcher Profile and STEM Data Explorer", layout="wide")
+st.set_page_config(page_title="Researcher Profile and Educational Qualification", layout="wide")
 
 # Sidebar Menu
 st.sidebar.title("Navigation")
@@ -135,6 +135,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
