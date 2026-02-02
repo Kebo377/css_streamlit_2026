@@ -9,7 +9,7 @@ st.set_page_config(page_title="Researcher Profile and STEM Data Explorer", layou
 st.sidebar.title("Navigation")
 menu = st.sidebar.radio(
     "Go to:",
-    ["Researcher Profile", "Educational Qualifications", "Contact"],
+    ["Researcher Profile", "Publications", "STEM Data Explorer", "Contact"],
 )
 
 # Dummy STEM data
@@ -34,13 +34,13 @@ weather_data = pd.DataFrame({
 
 # Sections based on menu selection
 if menu == "Researcher Profile":
-    st.title("My Profile")
-    #st.sidebar.header("Profile Options")
+    st.title("Researcher Profile")
+    st.sidebar.header("Profile Options")
 
     # Collect basic information
-    name = "Kebogile Sesana"
-    field = "Mathematics"
-    institution = "University of the Free State"
+    name = "Dr. Jane Doe"
+    field = "Astrophysics"
+    institution = "University of Science"
 
     # Display basic profile information
     st.write(f"**Name:** {name}")
@@ -48,45 +48,19 @@ if menu == "Researcher Profile":
     st.write(f"**Institution:** {institution}")
     
     st.image(
-    "https://fiveable.me/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fstatic.prod.fiveable.me%2Fsearch-images%252F%2522Fundamental_definitions_examples_groups_rings_fields_algebraic_structures_image_diagram_visual_representation%2522-RealSet_w600.png&w=3840&q=75",
-    #caption="My Profile Picture",
-    width=1000
-    )
+    "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+    caption="Nature (Pixabay)"
+)
 
-st.title("Educational Qualification")
-
-qualifications = [
-    {
-        "title": "Bachelor of Sciences in Mathematics and Applied Mathematics",
-        "skill": "Matlab, Critical thinking, Problem solver"
-    },
-    {
-        "title": "National Senior Certificate",
-        "institution": "Motswela Secondary School",
-        "year": "2019",
-        "details": "Mathematics, Physical Sciences, Life Sciences, Geography"
-    }
-]
-
-st.title("Educational Qualification")
-
-for q in qualification:
-    st.subheader(q["title"])
-    st.write(f"**Institution:** {q['institution']}")
-    st.write(f"**Year:** {q['year']}")
-    st.write(f"**Details:** {q['details']}")
-    st.divider()
-    break
-
-elif menu == "Educational_Qualifications":
-    st.title("Educational_Qualifications")
+elif menu == "Publications":
+    st.title("Publications")
     st.sidebar.header("Upload and Filter")
 
-    # Upload Educational_Qualifications file
-    uploaded_file = st.file_uploader("Upload a pdf  of your educational_qualifications", type="Educational Qualifications")
+    # Upload publications file
+    uploaded_file = st.file_uploader("Upload a CSV of Publications", type="csv")
     if uploaded_file:
-        educational_qualifications = pd.read_csv(uploaded_file)
-        st.dataframe(Educational_Qualifications)
+        publications = pd.read_csv(uploaded_file)
+        st.dataframe(publications)
 
         # Add filtering for year or keyword
         keyword = st.text_input("Filter by keyword", "")
@@ -97,12 +71,12 @@ elif menu == "Educational_Qualifications":
             st.write(f"Filtered Results for '{keyword}':")
             st.dataframe(filtered)
         else:
-            st.write("Showing all Educational_Qualifications")
+            st.write("Showing all publications")
 
-        # Educational_Qualifications trends
-        if "Year" in Educational_Qualifications.columns:
-            st.subheader("Educational _Qualifications")
-            year_counts = Educational_Qualifications["Year"].value_counts().sort_index()
+        # Publication trends
+        if "Year" in publications.columns:
+            st.subheader("Publication Trends")
+            year_counts = publications["Year"].value_counts().sort_index()
             st.bar_chart(year_counts)
         else:
             st.write("The CSV does not have a 'Year' column to visualize trends.")
@@ -110,8 +84,7 @@ elif menu == "Educational_Qualifications":
 elif menu == "STEM Data Explorer":
     st.title("STEM Data Explorer")
     st.sidebar.header("Data Selection")
-
-
+    
     # Tabbed view for STEM data
     data_option = st.sidebar.selectbox(
         "Choose a dataset to explore", 
@@ -156,51 +129,7 @@ elif menu == "STEM Data Explorer":
         
 
 elif menu == "Contact":
-    #Add a contact section
+    # Add a contact section
     st.header("Contact Information")
-    email = "kebogilesesana@gmail.com"
-
+    email = "jane.doe@example.com"
     st.write(f"You can reach me at {email}.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
