@@ -50,6 +50,7 @@ if menu == "Researcher Profile":
     st.image(
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe8afHmwj85AbxWagFZh9eig4MKyfYwGSSyOcEnu1P_a_HxQJe5uZdk1Y&s",
     #caption="Nature (Pixabay)"
+    width = 1500
 )
 
 elif menu == "Educational Qualifications":
@@ -134,6 +135,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
