@@ -19,4 +19,5 @@ st.write(data)
 fig = px.line(data, x="x", y="y", title="Simple Plotly Example")
 
 # Display the plot in the Streamlit app
+
 st.plotly_chart(fig)
