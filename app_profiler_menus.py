@@ -76,7 +76,7 @@ elif menu == "Educational Qualifications":
         # Educational Qualifications trends
         if "Year" in EducationalQualifications.columns:
             st.subheader("Educational Qualifications Trends")
-            year_counts = Educational Qualifications["Year"].value_counts().sort_index()
+            year_counts = EducationalQualifications["Year"].value_counts().sort_index()
             st.bar_chart(year_counts)
         else:
             st.write("The CSV does not have a 'Year' column to visualize trends.")
@@ -134,6 +134,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
