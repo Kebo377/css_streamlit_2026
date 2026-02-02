@@ -65,16 +65,16 @@ elif menu == "Educational Qualifications":
         # Add filtering for year or keyword
         keyword = st.text_input("Filter by keyword", "")
         if keyword:
-            filtered = Educational Qualifications[
-                Educational Qualifications.apply(lambda row: keyword.lower() in row.astype(str).str.lower().values, axis=1)
+            filtered = EducationalQualifications[
+                EducationalQualifications.apply(lambda row: keyword.lower() in row.astype(str).str.lower().values, axis=1)
             ]
             st.write(f"Filtered Results for '{keyword}':")
             st.dataframe(filtered)
         else:
             st.write("Showing all Educational Qualifications")
 
-        # EducationalQualifications trends
-        if "Year" in Educational Qualifications.columns:
+        # Educational Qualifications trends
+        if "Year" in EducationalQualifications.columns:
             st.subheader("Educational Qualifications Trends")
             year_counts = Educational Qualifications["Year"].value_counts().sort_index()
             st.bar_chart(year_counts)
@@ -134,6 +134,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
