@@ -9,7 +9,7 @@ st.set_page_config(page_title="Researcher Profile and Educational Qualification"
 st.sidebar.title("Navigation")
 menu = st.sidebar.radio(
     "Go to:",
-    ["Researcher Profile", "Educational Qualifications", "STEM Data Explorer", "Contact"],
+    ["Researcher Profile", "Educational Qualifications", "Contact"],
 )
 
 # Dummy STEM data
@@ -135,6 +135,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
