@@ -76,6 +76,7 @@ for q in qualification:
     st.write(f"**Year:** {q['year']}")
     st.write(f"**Details:** {q['details']}")
     st.divider()
+    break
 
 elif menu == "Educational_Qualifications":
     st.title("Educational_Qualifications")
@@ -160,6 +161,7 @@ elif menu == "Contact":
     email = "kebogilesesana@gmail.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
